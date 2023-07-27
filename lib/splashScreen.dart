@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 
 class SplashScreen extends StatefulWidget {
@@ -10,6 +11,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin{
 
+  late final AnimationController _controller = AnimationController(vsync: this,duration: const Duration(seconds: 3))..repeat();
 
   @override
   void initState() {
@@ -26,7 +28,9 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children:  [
-
+            AnimatedBuilder(animation: _controller, builder: (BuildContext context,Widget? child){
+              return Transform.rotate(angle: _controller.value,child: ,)
+            })
           ],
         ),
       ),
