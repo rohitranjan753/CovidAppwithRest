@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen>
                     ),
                   );
                 }),
-            SizedBox(height: MediaQuery.of(context).size.height*0.8,),
+            SizedBox(height: 20,),
             const Align(
               alignment: Alignment.center,
               child: Text('Covid-19\nTracker App',style: TextStyle(
