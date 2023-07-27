@@ -34,7 +34,7 @@ class _WorldStatesScreenState extends State<WorldStatesScreen> with TickerProvid
           child: Column(
             children: [
               SizedBox(height: MediaQuery.of(context).size.height*0.01,),
-              PieChart(dataMap: {"Total":20,"Recovered": 15,"Deaths":5},animationDuration: Duration(milliseconds: 1200),)
+              PieChart(dataMap: {"Total":20,"Recovered": 15,"Deaths":5},animationDuration:const Duration(milliseconds: 1200),)
 
             ],
           ),
