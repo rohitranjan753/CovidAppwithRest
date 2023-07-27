@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'dart:ui';
 
+import 'package:covidappwithrest/world_states.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
@@ -20,6 +22,7 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     // TODO: implement initState
     super.initState();
+    Timer(const Duration(seconds: 3),()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>WorldStatesScreen())));
   }
 
   @override
