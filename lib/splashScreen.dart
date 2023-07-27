@@ -25,6 +25,13 @@ class _SplashScreenState extends State<SplashScreen>
     Timer(const Duration(seconds: 3),()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>WorldStatesScreen())));
   }
 
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
